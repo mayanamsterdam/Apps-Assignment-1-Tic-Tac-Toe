@@ -8,12 +8,88 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/main_activity_statusText_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="120dp"
+        android:text="@string/player_x_s_turn"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/main_activity_cells_gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/main_activity_cells_gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintEnd_toEndOf="@+id/main_activity_statusText_textview"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/main_activity_statusText_textview"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_statusText_textview">
+
+        <Button
+            android:id="@+id/main_activity_cell_btn0_button"
+            style="@style/TicTacToeButton"
+            android:tag="0" />
+
+        <Button
+            android:id="@+id/main_activity_cell_btn1_button"
+            style="@style/TicTacToeButton"
+            android:tag="1" />
+
+        <Button
+            android:id="@+id/main_activity_cell_btn2_button"
+            style="@style/TicTacToeButton"
+            android:tag="2" />
+
+        <Button
+            android:id="@+id/main_activity_cell_btn3_button"
+            style="@style/TicTacToeButton"
+            android:tag="3" />
+
+        <Button
+            android:id="@+id/main_activity_cell_btn4_button"
+            style="@style/TicTacToeButton"
+            android:tag="4" />
+
+        <Button
+            android:id="@+id/main_activity_cell_btn5_button"
+            style="@style/TicTacToeButton"
+            android:tag="5" />
+
+        <Button
+            android:id="@+id/main_activity_cell_btn6_button"
+            style="@style/TicTacToeButton"
+            android:tag="6" />
+
+        <Button
+            android:id="@+id/main_activity_cell_btn7_button"
+            style="@style/TicTacToeButton"
+            android:tag="7" />
+
+        <Button
+            android:id="@+id/main_activity_cell_btn8_button"
+            style="@style/TicTacToeButton"
+            android:tag="8" />
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/main_activity_reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
+        android:text="@string/restart_game"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/main_activity_cells_gridLayout"
+        app:layout_constraintStart_toStartOf="@+id/main_activity_cells_gridLayout"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_cells_gridLayout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
